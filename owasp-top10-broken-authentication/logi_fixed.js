@@ -8,16 +8,16 @@ const bodyParser = require("body-parser");
 const app = express();
 const PORT = 3000;
 
-// Dummy-Datenbank mit gehashten Passwörtern
+// dummy-database with hashed passwords
 const users = {
   alice: {
     username: "alice",
-    // Passwort: "password123"
+    // password: "password123"
     passwordHash: "$2a$12$B5G2JwbNOyR/ADhzBDK5ce7B7cPvSBlQU1RjZ04MQRQ9tf6OQxwAa"
   },
   bob: {
     username: "bob",
-    // Passwort: "qwerty"
+    // password: "qwerty"
     passwordHash: "$2a$12$iNOCD6egXxPIFRN40dpQJeZVczghIqP8V3Ym0hXsqU06c9w7siV3O"
   }
 };
