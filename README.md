@@ -1,27 +1,55 @@
 # OWASP Top 10 – Broken Authentication Demo
 
-Dieses Projekt ist Teil einer Sammlung von einfachen Demos zur Veranschaulichung der [OWASP Top 10](https://owasp.org/www-project-top-ten/).  
-Diese Anwendung zeigt eine typische **Broken Authentication**-Schwachstelle, indem sie jeden Login-Versuch – unabhängig von Benutzername und Passwort – akzeptiert.
+This project is part of a collection of simple demonstrations illustrating the [OWASP Top 10](https://owasp.org/www-project-top-ten/) security risks.  
+This application showcases a typical Broken Authentication vulnerability by accepting any login attempt, regardless of username or password.
 
 ---
 
-## Beschreibung
+## Description
 
-Die Anwendung stellt ein einfaches Login-Formular bereit, das alle eingegebenen Anmeldeinformationen **bedingungslos akzeptiert**.  
-Dies demonstriert eine schwerwiegende Verletzung grundlegender Authentifizierungslogik und simuliert eine realistische, aber fehlerhafte Implementierung, wie sie in schlecht gesicherten Webanwendungen vorkommen kann.
+The application provides a basic login form that *unconditionally accepts* any set of login credentials.  
+This demonstrates a critical violation of basic authentication logic and simulates a flawed implementation, such as might be found in insecure or hastily built web applications.
+
+The project includes:
+- A *broken version* that accepts all login attempts and exposes multiple authentication flaws
+- A *fixed version* that properly validates credentials and applies basic security best practices
 
 ---
 
-## Ausführen der Demo
+## Running the Demo
 
-### Voraussetzungen
+### Prerequisites
 
-- [Node.js](https://nodejs.org/) (getestet mit Version ≥ 18)
+- [Node.js](https://nodejs.org/) (tested with version ≥ 18)
 - [npm](https://www.npmjs.com/)
+
+---
 
 ### Installation
 
 ```bash
 git clone https://github.com/DerLolly99/Broken-Authentication-Demo.git
 cd Broken-Authentication-Demo
-npm install
+npm install
+```
+
+### Execution
+
+**1. Broken version:**
+
+```bash
+node logi.js
+```
+
+This will launch the login page at:
+http://localhost:3000/logi.html
+
+**2. Fixed version:**
+
+```bash
+node logi_fixed.js
+```
+
+This will launch the login page at:
+http://localhost:3000
+
